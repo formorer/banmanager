@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+use Log::Log4perl qw(:easy);
+
+BEGIN {
+    Log::Log4perl->easy_init();
+}
+
+use BanManager::Cmd;
+
+BanManager::Cmd->run;
